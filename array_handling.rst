@@ -12,6 +12,6 @@
 	
 	
 	- for real data/array there are 3 kind types:
-		kind=4, kind=8, and  kind=16 for real data (for details see the link `web gcc.gnu.org <https://gcc.gnu.org/onlinedocs/gfortran/KIND-Type-Parameters.html>`_ as well as `intel website <https://www.intel.com/content/www/us/en/develop/documentation/fortran-compiler-oneapi-dev-guide-and-reference/top/language-reference/a-to-z-reference/q-to-r/real-function.html>_).
+		kind=4, kind=8, and  kind=16 for real data (for details see the link `web gcc.gnu.org <https://gcc.gnu.org/onlinedocs/gfortran/KIND-Type-Parameters.html>`_ as well as `intel website <https://www.intel.com/content/www/us/en/develop/documentation/fortran-compiler-oneapi-dev-guide-and-reference/top/language-reference/a-to-z-reference/q-to-r/real-function.html>`_).
 		
 	
