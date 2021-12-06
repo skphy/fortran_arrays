@@ -37,26 +37,32 @@
     - example of using assumed shape array:
     
         When passing arrays in and out of a subroutine/function, use the following pattern for 1D arrays (it is called assumed-shape):
+        
+        code-block:: fortran
 
-        subroutine f(r)
-        real(dp), intent(out) :: r(:)
-        integer :: n, i
-        n = size(r)
-        do i = 1, n
-            r(i) = 1.0_dp / i**2
-        enddo
-        end subroutine
+            subroutine f(r)
+                real(dp), intent(out) :: r(:)
+                integer :: n, i
+                n = size(r)
+                do i = 1, n
+                    r(i) = 1.0_dp / i**2
+                enddo
+            end subroutine
 
         2D arrays:
-
-        subroutine g(A)
-        real(dp), intent(in) :: A(:, :)
-        ...
-        end subroutine
+        
+        code-block:: fortran
+        
+            subroutine g(A)
+                real(dp), intent(in) :: A(:, :)
+                ...
+            end subroutine
 
         and call it like this:
 
-        real(dp) :: r(5)
-        call f(r)
+        code-block:: fortran
+
+            real(dp) :: r(5)
+            call f(r)
 
 
