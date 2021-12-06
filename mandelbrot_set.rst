@@ -57,3 +57,4 @@
 		plt.ylabel('Im(z)')
 		plt.savefig("mandelbrot.png")
 
+	.. image:: mandelbrot.png
