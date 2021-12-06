@@ -1,7 +1,7 @@
 #. Example showing the data storage in Fortran and excessing it (VERY IMPORTANT)
 	- I input an array of shape(2,3) as input and see how fortran stores it and print it?
-	- Answer: data is stored column wise and can be printed rowwise or columnwise depending upon the print, write statement. By 
-		default, data is print in column major order. Kindly see the output of the following program.
+	- Answer: data is stored column wise and can be printed rowwise or columnwise depending upon the print, write statement. 
+		By default, data is print in column major order. Kindly see the output of the following program.
 		
 
 	.. code-block:: fortran
@@ -52,10 +52,10 @@
 		end program test
 		
 	Output: 
-		(compiled and linked using: ifort -o test.x test.f90 -I/home/sonu/f_util -L/home/sonu/f_util -lf_util)
-		(./test.x)
+	(compiled and linked using: ifort -o test.x test.f90 -I/home/sonu/f_util -L/home/sonu/f_util -lf_util)
+	(./test.x)
 	
-	.. code-block: fortran
+	.. code-block:: fortran
 
 		 rows of x:           2
 		 columns of x:           3
