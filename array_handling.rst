@@ -96,3 +96,45 @@
 
 
 	And then make sure that all the strides are always on the left. Then it will be fast.
+	
+#. Element-wise Operations on Arrays Using Subroutines/Functions
+
+	- There are three approaches:
+
+	    elemental subroutines
+	    explicit-shape arrays
+	    implementing the operation for vectors and write simple wrapper subroutines (that use reshape internally) for each array shape
+	    
+	    for details see the `fortran90.org<https://www.fortran90.org>`_.
+	    
+	- See the following: find out the interesting  stuff:  ***** x^(1/n) gives array output when x is an array or n in an array*****
+	
+	.. code-block:: fortran
+	
+		real(dp) elemental function nroot(n, x) result(y)
+		integer, intent(in) :: n
+		real(dp), intent(in) :: x
+		y = x**(1._dp / n)
+		end function
+
+	All arguments (in and out) must be scalars. You can then use this function with arrays of any (compatible) shape, for example:
+
+	.. code-block:: fortran
+	
+		print *, nroot(2, 9._dp)
+		print *, nroot(2, [1._dp, 4._dp, 9._dp, 10._dp])
+		print *, nroot(2, reshape([1._dp, 4._dp, 9._dp, 10._dp], [2, 2]))
+		print *, nroot([2, 3, 4, 5], [1._dp, 4._dp, 9._dp, 10._dp])
+		print *, nroot([2, 3, 4, 5], 4._dp)
+
+	The output will be:
+	
+	.. code-block:: fortran
+
+		3.0000000000000000
+		1.0000000000000000        2.0000000000000000        3.0000000000000000        3.1622776601683795
+		1.0000000000000000        2.0000000000000000        3.0000000000000000        3.1622776601683795
+		1.0000000000000000        1.5874010519681994        1.7320508075688772        1.5848931924611136
+		2.0000000000000000        1.5874010519681994        1.4142135623730951        1.3195079107728942
+
+	    
