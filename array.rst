@@ -32,7 +32,7 @@
 #. assumed shape array vs explicit shape array
     use assumed shape array in subroutines. But, if you want to interface your fortran program with c, python, and so on, better use explicit 
     shape array. 
-    For details see the link: https://www.fortran90.org/src/best-practices.html. This is `fortran90 website <https://www.fortran90.org>_`, 
+    For details see the link: https://www.fortran90.org/src/best-practices.html. This is `fortran90 website <https://www.fortran90.org>`_ 
     a beautiful explanation give here for fortran and its comparison with the python afaik. 
     
     - example of using assumed shape array:
