@@ -6,7 +6,7 @@
 	  ! this defines a 1D array of length 10 with float values
 	  ! dp means double precision i.e. kind type of array;  used to defined the precision and range of the array `a`
 	  !
-	  a = [1.,2.,3.,4.,5.,5.,6,7,8,9,10.1]
+	  a = [1.,2.,3.,4.,5.,5.,7,8,9,10.1]
 	  
 #. kind types in fortran for real arrays
 	
