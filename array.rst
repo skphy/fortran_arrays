@@ -15,18 +15,17 @@
     
 #. Private in module
 
-    module test
-        
-        use types, only: dp, sp
-        
-        use utils, only: stop_err
-        
-        implicit none
-        
-        private
-        ...
-        ..
-    end module test    
+    .. code-block:: fortran
+
+        module test
+            use types, only: dp, sp
+            use utils, only: stop_err
+            implicit none
+
+            private
+            ...
+            ..
+        end module test    
     
     the `private` is empty here => all your subroutines/data types will be private to the module by default.
 
