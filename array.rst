@@ -29,3 +29,8 @@
     end module test    
     
     the `private` is empty here => all your subroutines/data types will be private to the module by default.
+
+#. assumed shape array vs explicit shape array
+    use assumed shape array in subroutines. But, if you want to interface your fortran program with c, python, and so on, better use explicit 
+    shape array. 
+    For details see the link: https://www.fortran90.org/src/best-practices.html
