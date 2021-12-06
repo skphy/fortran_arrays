@@ -34,3 +34,30 @@
     use assumed shape array in subroutines. But, if you want to interface your fortran program with c, python, and so on, better use explicit 
     shape array. 
     For details see the link: https://www.fortran90.org/src/best-practices.html
+    
+    - example of using assumed shape array:
+    
+        When passing arrays in and out of a subroutine/function, use the following pattern for 1D arrays (it is called assumed-shape):
+
+        subroutine f(r)
+        real(dp), intent(out) :: r(:)
+        integer :: n, i
+        n = size(r)
+        do i = 1, n
+            r(i) = 1.0_dp / i**2
+        enddo
+        end subroutine
+
+        2D arrays:
+
+        subroutine g(A)
+        real(dp), intent(in) :: A(:, :)
+        ...
+        end subroutine
+
+        and call it like this:
+
+        real(dp) :: r(5)
+        call f(r)
+
+
