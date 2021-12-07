@@ -101,15 +101,15 @@
 
 	- There are three approaches:
 
-	    elemental subroutines
+	   - elemental subroutines
 	    
-	    explicit-shape arrays
+	   - explicit-shape arrays
 	    
-	    implementing the operation for vectors and write simple wrapper subroutines (that use reshape internally) for each array shape
+	   - implementing the operation for vectors and write simple wrapper subroutines (that use reshape internally) for each array shape
 	    
 	    for details see the `fortran90.org <https://www.fortran90.org>`_.
 	    
-	- See the following: find out the interesting  stuff: * x^(1/n) gives array output when x is an array or n in an array *
+	Now, See the following: find out the interesting  stuff: * x^(1/n) gives array output when x is an array or n in an array *
 	
 	.. code-block:: fortran
 	
