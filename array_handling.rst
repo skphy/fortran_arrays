@@ -102,7 +102,9 @@
 	- There are three approaches:
 
 	    elemental subroutines
+	    
 	    explicit-shape arrays
+	    
 	    implementing the operation for vectors and write simple wrapper subroutines (that use reshape internally) for each array shape
 	    
 	    for details see the `fortran90.org <https://www.fortran90.org>`_.
