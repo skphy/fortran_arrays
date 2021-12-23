@@ -5,10 +5,10 @@ The information related to fortran data types is taken from the link: https://ww
 
 Things to learn from this short tutorial:
 
-  #. Array handling
+  1. Array handling
 
      see here to follow the link: `Fortran array access `<https://github.com/skphy/fortran_arrays/blob/main/array_handling.rst>`_
 
-  #. Array storage: column or row major through fortran 
+  2. Array storage: column or row major through fortran 
 
      see the example: `columnmajor Fortan `<https://github.com/skphy/fortran_arrays/blob/main/array_printing.rst>`_
